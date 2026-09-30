@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطبخ لقمة هنية</title>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a20;
+            --accent-gold: #f39c12;
+            --accent-green: #2ecc71;
+            --text-color: #ffffff;
+            --text-muted: #b0b0b0;
+            --border-color: #2a2a35;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px 15px 90px 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, #1e1e26 0%, #14141a 100%);
+            border-radius: 16px;
+            border: 1px solid var(--accent-gold);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.15);
+        }
+
+        .header h1 {
+            color: var(--accent-gold);
+            font-size: 28px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .section-title {
+            color: var(--accent-gold);
+            font-size: 20px;
+            padding: 10px 15px;
+            background: #22222d;
+            border-right: 4px solid var(--accent-gold);
+            border-radius: 6px;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .item-row:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .item-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .item-price {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 15px;
+            white-space: nowrap;
+            background: rgba(46, 204, 113, 0.1);
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        .fixed-call-btn {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 30px);
+            max-width: 570px;
+            background: #25d366;
+            color: #fff;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>مطبخ لقمة هنية</h1>
+        <p>🍲 اكل بيتي - طعم البيت المصري الأصيل</p>
+    </div>
+
+    <!-- البيتزا -->
+    <div class="section-title">🍕 عروض البيتزا</div>
+    <div class="menu-card">
+        <div class="item-row"><span class="item-name">بيتزا مارجريتا</span><span class="item-price">صغير 90 ج | كبير 130 ج</span></div>
+        <div class="item-row"><span class="item-name">بيتزا خضروات</span><span class="item-price">صغير 95 ج | كبير 130 ج</span></div>
+        <div class="item-row"><span class="item-name">بيتزا فراخ</span><span class="item-price">صغير 120 ج | كبير 150 ج</span></div>
+        <div class="item-row"><span class="item-name">بيتزا فراخ باربكيو</span><span class="item-price">صغير 120 ج | كبير 150 ج</span></div>
+        <div class="item-row"><span class="item-name">بيتزا فراخ رانش</span><span class="item-price">صغير 110 ج | كبير 150 ج</span></div>
+        <div class="item-row"><span class="item-name">بيتزا لحم مفروم</span><span class="item-price">صغير 110 ج | كبير 155 ج</span></div>
+    </div>
+
+    <!-- المحشي -->
+    <div class="section-title">🍗 أطباق وعروض المحشي</div>
+    <div class="menu-card">
+        <div class="item-row">
+            <div>
+                <div class="item-name">فرخة مشوية + سلطة طحينة</div>
+            </div>
+            <span class="item-price">280 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">محشي (ورق عنب - كرنب - فلفل - باذنجان)</div>
+                <div class="item-desc">كيلو مستوي</div>
+            </div>
+            <span class="item-price">130 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">محشي (ورق عنب - كرنب - فلفل - باذنجان)</div>
+                <div class="item-desc">كيلو ني (جاهز للتسوية)</div>
+            </div>
+            <span class="item-price">120 ج</span>
+        </div>
+    </div>
+
+    <!-- عروض 230 -->
+    <div class="section-title">💰 عروض التوفير (230 ج)</div>
+    <div class="menu-card">
+        <div class="item-row">
+            <div class="item-name">كيلو محشي + صينية مكرونة بشاميل وسط</div>
+            <span class="item-price">230 ج</span>
+        </div>
+        <div class="item-row">
+            <div class="item-name">كيلو محشي + نص ممبار + ملوخية</div>
+            <span class="item-price">230 ج</span>
+        </div>
+        <div class="item-row">
+            <div class="item-name">نص ممبار + نص محشي + طاجن بشاميل</div>
+            <span class="item-price">230 ج</span>
+        </div>
+    </div>
+
+    <!-- عروض 365 -->
+    <div class="section-title">💰 عرض الفخامة (365 ج)</div>
+    <div class="menu-card">
+        <div class="item-row">
+            <div class="item-name">طاجن ورق عنب بالكوارع + صينية بشاميل + ملوخية</div>
+            <span class="item-price">365 ج</span>
+        </div>
+    </div>
+
+    <!-- عروض البيت -->
+    <div class="section-title">🏠 عروض البيت (530 ج)</div>
+    <div class="menu-card">
+        <div class="item-row">
+            <div class="item-name">كيلو محشي + فرخة كبيرة مشوية + صينية بشاميل وسط + ملوخية</div>
+            <span class="item-price">530 ج</span>
+        </div>
+        <div class="item-row">
+            <div class="item-name">كيلو محشي + كيلو ممبار + فرخة مشوية</div>
+            <span class="item-price">530 ج</span>
+        </div>
+    </div>
+
+    <!-- عروض الغدا والعزومات -->
+    <div class="section-title">👑 عروض الغدا والعزومات</div>
+    <div class="menu-card">
+        <div class="item-row">
+            <div>
+                <div class="item-name">1- عرض الفرد</div>
+                <div class="item-desc">ربع فرخة مشوية + طبق محشي مشكل</div>
+            </div>
+            <span class="item-price">120 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">2- عرض العيلة</div>
+                <div class="item-desc">فرخة مشوية متبلة + نص ممبار محمر</div>
+            </div>
+            <span class="item-price">390 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">3- عرض الطاجن الملكي</div>
+                <div class="item-desc">طاجن بشاميل + ربع فرخة مشوية</div>
+            </div>
+            <span class="item-price">215 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">4- عرض العزومة الكبير</div>
+                <div class="item-desc">فرخة مشوية كاملة + صينية جلاش بالبشاميل</div>
+            </div>
+            <span class="item-price">480 ج</span>
+        </div>
+        <div class="item-row">
+            <div>
+                <div class="item-name">5- عرض المحشي الملوكي</div>
+                <div class="item-desc">فرخة مشوية + كيلو محشي كرنب</div>
+            </div>
+            <span class="item-price">400 ج</span>
+        </div>
+    </div>
+
+    <!-- الأكل الجاهز والسندوتشات -->
+    <div class="section-title">🍲 الأكل الجاهز والسندوتشات</div>
+    <div class="menu-card">
+        <div class="item-row"><span class="item-name">مكرونة بالبشاميل</span><span class="item-price">ص: 70 | و: 120 | ك: 200 ج</span></div>
+        <div class="item-row"><span class="item-name">وجبة ربع فرخة مشوية + رز + سلطة</span><span class="item-price">125 ج</span></div>
+        <div class="item-row"><span class="item-name">كيلو ممبار مستوي ومحمر</span><span class="item-price">85 ج</span></div>
+        <div class="item-row"><span class="item-name">صينية جلاش باللحمة المفرومة</span><span class="item-price">150 ج</span></div>
+        <div class="item-row"><span class="item-name">رغيف كبدة اسكندراني</span><span class="item-price">20 ج</span></div>
+        <div class="item-row"><span class="item-name">رغيف حواوشي لحمة بلدي</span><span class="item-price">20 ج</span></div>
+        <div class="item-row"><span class="item-name">رغيف سجق شرقي</span><span class="item-price">20 ج</span></div>
+    </div>
+
+    <!-- زر الاتصال والطلب -->
+    <a class="fixed-call-btn" href="https://wa.me/201007472563" target="_blank">
+        📱 للطلب عبر الواتساب: 01007472563
+    </a>
+
+</body>
+</html>
